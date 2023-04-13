@@ -30,7 +30,7 @@ The technique is used when:
 - It is made from another sequence/iterable data.
 - The list is a member of another list/sequence/iterable data that satisfies a certain condition
 
-This is wheer the __lambda function__ would be used...
+This is where the __lambda function__ would be used...
 ```python
 # List comprehension example 1
 squares = [i**2 for i in range(10)]
