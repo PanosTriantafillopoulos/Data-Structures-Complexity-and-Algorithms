@@ -58,6 +58,64 @@ print('Vec as a single list of values: %s' % result) # outpust --> [1, 2, 3, 4, 
 ```
 Vec is an example of a matrix in python be using list of lists
 ## 2: Map & Filter
+### The Map Function
+The idea of a map function is to apply a function to an iterable data.
+
+Format: map(function_name, sequence)
+- function_name: any function (built-in or selfmade) that returns a desired value of choice
+- sequence: any iterable data type
+
+```python
+# Example
+def square(num):
+    ''' squares the given num argument '''
+    return num ** 2
+
+array = list(range(1,11))
+square_array = list(map(square, array))
+
+print('Original Array:', array)
+print('Array Squared:', square_array)
+```
+Original Array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Array Squared: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+Note: map function doesn’t return a specific data type, but rather, an python iterable data. Therefore, after we apply the map function, we just execute a list function on it.
+### Filter Function
+The idea of the filter function is to filter out items from a data set that meets a certain condition.
+
+Format: filter(bool_returning_function, sequence)
+- function: The function name we provide for filter() must be return a boolean value ... should also be able handle the items inside the sequence as its arguments.
+- sequence: any iterable data type.
+
+```python
+def isOdd(x):
+    ''' isOdd() returns True if x is odd.'''
+    return x % 2 != 0
+
+array = list(range(1,101))
+odds = list(filter(isOdd, array))
+
+print('Odd Numbers from 1 to 100:', odds) # will output all add numbers from one to 100
+```
+### Example using Both Filter and Map
+```python
+# Palindromic Numbers from 1 to 10000
+
+def isPalindrome(x):
+    ''' isPalindrome returns True if string X is a palindrome.'''
+    return x == x[::-1]
+
+array = list(range(1,10000))
+
+palindromic_numbers = list(map(int, filter(isPalindrome, map(str, array))))
+print('Palindromic Numbers from 1 to 10,000', palindromicNumbers)
+```
+Function Composition Breakdown
+1. string version of the array --> map(str, array)
+2. filter out the palindrome --> filter(isPalindrome, string version of the array)
+3. remap all values back to integers --> map(int, palindromes)
+4. turn the mapped integers iterable back inside a list --> list(palindromicIterables)
 
 ## 3: Tuples
 
