@@ -184,7 +184,7 @@ A set is an unordered collection with no duplicate elements in Python 3.
 
 Set is a mathematical way to describe collection of different unique objects.
 
-Built-in functions can be utilized on sets.
+Built-in functions can be utilized on sets. (ex. len, min, max, etc)
 ```python
 # Defining a Set
 example_set1 = {1, 2, 3}
@@ -208,6 +208,38 @@ example_set2: {'o', 'e', 'h', 'l'}
 Singleton: {7}
 Empty Set: set()
 '''
+```
+Sets are mutable and values can be added and removed. There are methods that can affect the original set as well (can use .pop(), .clear(), etc.).
+
+Set Operators
+- Union: The joining/combining of two sets.
+- Intersection: Members/Items that only exists in both sets.
+- Difference: Members/items that only exists in the first set and not the second set.
+- Symmetric Difference: Members/items that exists one or the other set, but not both sets
+- Proper Subset: This is a boolean operator.
+- Subset: This is a boolean operator (A is a Proper Subset of B if A < B is True, but A can equal to B unlike a proper subset)
+- Proper Superset: This is a boolean operator (A is a proper superset of B if A has all the values of B and more, but they are not equal to each other)
+- Superset: This is a boolean operator (A is a superset of B if A > B or A == B)
+
+Disjoint
+Two set are consided disjointed when two sets share no common value.
+- Let A and B both represent a set.
+- If A & B is empty, then set A and B are considered disjointed.
+- To check this in python there is a method called: isdisjoint()
+
+Set Comprehension
+- Much like list comprehension, sets support comprehension as well.
+```python
+# Example
+def isPalindrome(x):
+    ''' isPalindrome() returns True if string X is a palindrome '''
+    return x == x[::-1]
+
+nums = list(range(1,10000))
+palindromic_set = {num for num in nums if isPalindrome(str(num))}
+
+print('Palindromic Numbers Set from 1 to 10000:')
+print(palindromic_set)
 ```
 ## 5: Dictionary
 Dictionary (Associative Array, map, symbol table) is a data type that stores a collection of (key, value) pairs, such that each possible key appears at most once in the collection (This concept is an introduction to concepts similar to: hash table and search trees).
