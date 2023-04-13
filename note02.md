@@ -1,9 +1,9 @@
 # Data Structures Complexity and Algorithms
 
 
-## 1: Matrices $ List Comprehension
+## 1: Matrices & List Comprehension
 
-## 2: Map $ Filter
+## 2: Map & Filter
 
 ## 3: Tuples
 
