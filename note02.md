@@ -34,7 +34,29 @@ This is wheer the __lambda function__ would be used...
 ```python
 # List comprehension example 1
 squares = [i**2 for i in range(10)]
+
+print('Our new result: %s' % squares) # output --> Our new result: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
+List comprehension consists of :
+- A __Square Bracket__ containing an expression that describes the list
+- One or more __For clause__ to explain itrs members
+- Then a zero or more __if clauses__ depending on the complexit of the list
+
+```python
+# List comprehension example 2
+a = [1,2,3]
+b = [3,1,4]
+
+result = [[x, y] for x in a for y in b if x != y]
+print(result) # output --> [[1, 3], [1, 4], [2, 3], [2, 1], [2, 4], [3, 1], [3, 4]]
+
+# List comprehension example 3
+vec = [[1,2,3], [4,5,6], [7,8,9]]
+
+result = [value for row in vec for value in row]
+print('Vec as a single list of values: %s' % result) # outpust --> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+Vec is an example of a matrix in python be using list of lists
 ## 2: Map & Filter
 
 ## 3: Tuples
