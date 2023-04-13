@@ -118,7 +118,67 @@ Function Composition Breakdown
 4. turn the mapped integers iterable back inside a list --> list(palindromicIterables)
 
 ## 3: Tuples
+Strings and Lists are basic iterable data types that are very similar with key differences:
 
+Strings only allow alphanumeric characters and special symbols to represent text
+Lists allow all data types as its items/members
+Strings are immutable whereas Lists are mutable
+These significant differences cause a headache when you require the following data structure:
+
+It must be immutable
+It must allow different datatypes as items
+It must be iterable
+It must be nestable (much like a list within a list)
+All of these are solved with a data structure called: __Tuple__.
+- Tuples are declared with parenthesis … aka round brackets
+- () is an empty tuple
+- (50,) is a singleton tuple; the comma is required
+- Tuples are sliceable; therefore, indexable using square brackets
+```python 
+# Some Tuple Examples
+tup = ('C', ' Java', 'Python')
+empty_tup = ()
+single_tup = ('Park',)
+
+print(tup) # O: ('C', ' Java', 'Python')
+print(empty_tup) # O: ()
+print(single_tup) # O: ('Park',)
+
+# Concatenation: Joining two tuples
+a = (1,2,3)
+b = (4,5,6)
+concat_result = a + b
+print('a+b:', concat_result)
+
+
+# Repetition: Repeating a list multiple times
+c = ('Hi!',)
+repet_result = c * 3
+print('c*3', repet_result)
+
+# Membership: Check if a value exists in a tuple
+d = a + b + c
+print('d:', d)
+print('\'Hi!\' in d:', 'Hi!' in d)
+print('7 in d:', 7 in d)
+# Packing
+var_1 = 2
+var_2 = 3
+var_3 = 5
+
+prime = var_1, var_2, var_3
+
+print('Packed prime values:', prime)
+
+# Unpacking and Repacking
+fib = (0, 1, 1, 2, 3, 5, 8)
+
+fib_0, fib_1, fib_n = fib[0], fib[1], fib[2:]
+print('fib_0:', fib_0)
+print('fib_1:', fib_1)
+print('fib_n:', fib_n)
+```
+A singleton is an iterable data structure with only single item.
 ## 4: Sets
 
 
