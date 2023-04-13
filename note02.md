@@ -1,4 +1,4 @@
-# Data Structures Complexity and Algorithms
+# Data Structures
 
 
 ## 1: Matrices & List Comprehension
@@ -180,8 +180,35 @@ print('fib_n:', fib_n)
 ```
 A singleton is an iterable data structure with only single item.
 ## 4: Sets
+A set is an unordered collection with no duplicate elements in Python 3.
 
+Set is a mathematical way to describe collection of different unique objects.
 
+Built-in functions can be utilized on sets.
+```python
+# Defining a Set
+example_set1 = {1, 2, 3}
+example_set2 = {'h','e','l','l','o'}
+
+print('example_set1:', example_set1)
+print('example_set2:', example_set2) # Notice there is only 1 'l'; Also notice the order of the values outputted
+print('--')
+
+singleton_set = {7}
+empty_set = set() # this is because {} is reversed for a different feature in python 3.
+
+print('Singleton:', singleton_set)
+print('Empty Set:', empty_set)
+
+'''
+output
+example_set1: {1, 2, 3}
+example_set2: {'o', 'e', 'h', 'l'}
+--
+Singleton: {7}
+Empty Set: set()
+'''
+```
 ## 5: Dictionary
 Dictionary (Associative Array, map, symbol table) is a data type that stores a collection of (key, value) pairs, such that each possible key appears at most once in the collection (This concept is an introduction to concepts similar to: hash table and search trees).
 Dictionaries also use {} like sets; however, their individual item format is very different. Each item in a dictionary be a pair of key: value. Keys are unique address for a dictionary value’s location. Keys must be immutable (string, numbers, tuples, frozenset) and unique (therefore, two same key values cannot exist in a single dictionary)
@@ -202,7 +229,7 @@ print('Username:', sammy['username'])
 print('Online Status:', sammy['online'])
 print('Follower Count:', sammy['followers'])
 '''
-# Output
+Output
 Sammy dict: {'username': 'sammy', 'online': True, 'followers': 42}
 Username: sammy
 Online Status: True
@@ -256,3 +283,4 @@ Will produce errors as samy is no longer defined.
 - A.items() –> Returns a sequence of key,item pairs in A
 - A.get(address) –> Returns the item value at address
 - A.update(B) –> Extends A with the dictionary of key,value pairs of B
+# Complexity & Algorithm
